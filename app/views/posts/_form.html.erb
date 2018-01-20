@@ -12,8 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %><br>
+    <%= f.label "Post title" %><br>
+    <%= f.text_field :name, {id: "Name"}%><br>
+    <%= f.text_area :content, {id: "Content"} %><br>
+    <% :tags.each |tag| do %>
+    <%= f.check_box tag %>
+    <% end -%>
+
   </div>
 
   <div class="actions">
